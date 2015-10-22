@@ -1,0 +1,65 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <div ng-hide="authenticated">
+      <ion-list>
+
+        <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/account/signup">
+          <!--<ion-option-button class="button-assertive">
+            SignUp
+          </ion-option-button>-->
+          <h1>Signup</h1>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/account/login">
+          <!--<ion-option-button class="button-assertive">
+            Login
+          </ion-option-button>-->
+          <h1>Login</h1>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="item item-divider" ng-show="authenticated">
+      <p class="navbar-right navbar-text" ng-show="authenticated"><h3>Signed in as {{current_user}}</h3></p>
+    </div>
+
+
+
+    <ion-list ng-show="authenticated">
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/account/profile">
+                <h1>Profile</h1>
+      </ion-item>
+    </ion-list>
+
+    <ion-list ng-show="authenticated">
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/account/posts">
+        <h1>Posts</h1>
+      </ion-item>
+    </ion-list>
+
+
+ <!--   <ion-list ng-show="authenticated">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" ng-click="signout()">
+
+        <h1>Signout</h1>
+      </ion-item>
+    </ion-list>
+-->
+<br>
+    <br>
+    <br>
+    <div class="row row-center">
+      <div class="col-75 col-offset-25">
+        <button ng-show="authenticated" class="button button-icon ion-log-out " ng-click="signout()" >Signout</button>
+      </div>
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>

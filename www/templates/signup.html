@@ -1,0 +1,54 @@
+<ion-view view-title="Account">
+  <ion-content>
+
+    <!--<div class="list card">
+      <form class="form-auth" ng-submit="register()">
+        <h2>Register</h2>
+        <p class="text-warning">{{error_message}}</p>
+        <input required type="text" ng-model="user.name" placeholder="Name" class="form-control"><br/>
+        <input required type="email" ng-model="user.email" placeholder="Email" class="form-control"><br/>
+        <input required type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+        <input required type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+        <input type="submit" value="Register" class="btn btn-primary pull-right"  />
+      </form>
+    </div>-->
+
+    <div class="list card">
+      <form ng-submit="register()">
+        <h2>Register</h2>
+        <p class="text-warning">{{error_message}}</p>
+
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input ng-model="user.name" type="text">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input ng-model="user.email" type="email">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input ng-model="user.username" type="text">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input ng-model="user.password" type="password">
+        </label>
+
+        <!--<input required type="text" ng-model="user.name" placeholder="Name" class="form-control"><br/>
+        <input required type="email" ng-model="user.email" placeholder="Email" class="form-control"><br/>
+        <input required type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+        <input required type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>-->
+
+        <br>
+        <br>
+
+        <input type="submit" value="Register" class="btn btn-primary pull-right"  />
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>

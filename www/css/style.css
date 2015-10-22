@@ -1,0 +1,82 @@
+body {
+  /*padding-top:70px;*/
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.submit-btn {
+  background-color: #b1dbff;
+  margin: 10px 0 10px 0;
+}
+
+.post {
+  padding: 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.odd {
+  background-color: #f2f9ff;
+
+}
+.even {
+  background-color: #eceff3;
+}
+
+.form-auth {
+  max-width: 330px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+
+/*Loading bar */
+
+.bar.bar-loading {
+  display: block;
+  height: 10px;
+
+  /* starts right below a normal header */
+  top: 0px;
+
+  /* make the text centered vertically and horizontally */
+  text-align: center;
+  padding: 0;
+  line-height: 24px;
+
+  /* transition 'sliding down' (check below)*/
+  -webkit-transition: 200ms all;
+}
+
+
+/*
+ * make the content's top changes animate.
+ * might not always look good, but looks
+ * good when our loader is added & removed
+ */
+.has-header {
+  -webkit-transition: 20ms top;
+}
+.has-header.has-loading {
+  /* 44px (header) + 24px */
+  top: 0px;
+}
+
+/* make loading bar slide up/down */
+.bar-loading.ng-enter,
+.bar-loading.ng-leave.ng-leave-active {
+  height: 0;
+  border-width: 0px;
+}
+.bar-loading.ng-enter.ng-enter-active,
+.bar-loading.ng-leave {
+  height: 24px;
+  border-width: 1px;
+}
