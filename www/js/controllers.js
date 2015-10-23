@@ -10,7 +10,7 @@ angular.module('starter.controllers', []).run(function ($http, $rootScope) {
 })
 
 
-  .controller('DashCtrl', function ($scope, $http, $rootScope) {
+  .controller('DashCtrl', function ($scope, $http,$timeout, $rootScope) {
     console.log("Inside Controller ");
 
     $http.get("http://chirp-saswat.azurewebsites.net/api/posts")
@@ -22,6 +22,26 @@ angular.module('starter.controllers', []).run(function ($http, $rootScope) {
 
     $scope.newPost = {created_by: '', text: '', created_at: ''};
 
+    $scope.doRefresh = function () {
+
+      $timeout( function() {
+        //simulate async response
+
+        $http.get("http://chirp-saswat.azurewebsites.net/api/posts")
+          .success(function (response) {
+            $scope.posts = response;
+
+          });
+
+        //Stop the ion-refresher from spinning
+        $scope.$broadcast('scroll.refreshComplete');
+
+      }, 1000);
+
+
+
+
+    }
     $scope.post = function () {
       console.log("Inside Post method ")
       $scope.newPost.created_by = $rootScope.current_user;
